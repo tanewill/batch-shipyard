@@ -1262,7 +1262,8 @@ def action_remotefs_cluster_start(
     """
     remotefs.start_storage_cluster(compute_client, config, wait)
     if wait:
-        remotefs.stat_storage_cluster(compute_client, network_client, config)
+        remotefs.stat_storage_cluster(
+            compute_client, network_client, config, _REMOTEFSSTAT_FILE[0])
 
 
 def action_remotefs_cluster_status(compute_client, network_client, config):
